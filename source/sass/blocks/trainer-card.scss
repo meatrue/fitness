@@ -1,0 +1,143 @@
+.trainer-card {
+  position: relative;
+
+  &:hover .trainer-card__cover::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
+  }
+
+  &:hover .trainer-card__info {
+    opacity: 1;
+  }
+
+  &:hover .trainer-card__cover-title {
+    opacity: 0;
+  }
+
+  &:hover .trainer-card__cover-image {
+    transform: scaleX(-1);
+  }
+
+  @include vp-1199 {
+    &:active .trainer-card__cover::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
+    }
+
+    &:active .trainer-card__info {
+      opacity: 1;
+    }
+
+    &:active .trainer-card__cover-title {
+      opacity: 0;
+    }
+
+    &:active .trainer-card__cover-image {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+.trainer-card__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  color: $color-default-white;
+  background-color: #c1c6d2;
+  transition: all 1s ease;
+}
+
+.trainer-card__cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.trainer-card__cover-title {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  left: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  transition: opacity 1s ease;
+}
+
+.trainer-card__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: $color-default-white;
+  background-color: rgba(16, 38, 84, 0.89);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  scrollbar-color: #093d82 rgba(16, 38, 84, 0.89);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgba(16, 38, 84, 0.89);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #093d82;
+    border-radius: 9em;
+  }
+}
+
+.trainer-card__info-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.trainer-card__info-sport {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #b6bdcc;
+  text-align: center;
+}
+
+.trainer-card__info-list {
+  width: 70%;
+  margin: 0 auto;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  list-style-type: disc;
+}
+
+.trainer-card__info-item:not(:last-child) {
+  margin-bottom: 14px;
+}
+

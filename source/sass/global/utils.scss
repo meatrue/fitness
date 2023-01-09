@@ -17,6 +17,20 @@
   }
 }
 
+.section-wrapper {
+  min-width: $min-content-width;
+  max-width: $max-content-width;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    max-width: $max-content-width-tablet;
+  }
+
+  @include vp-767 {
+    max-width: $max-content-width-mobile;
+  }
+}
+
 .rouble {
   font-family: $ff-rouble;
   /* stylelint-disable */

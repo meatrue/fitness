@@ -1,0 +1,97 @@
+.header {
+  min-height: 658px;
+  padding: 30px 40px 51px;
+  color: $color-default-white;
+  background-color: #b1022a;
+  background-image: $conic-gradient;
+
+  @include vp-1199 {
+    min-height: 554px;
+    padding: 40px 45px 82px;
+    background-image: $conic-gradient-tablet;
+  }
+
+  @include vp-767 {
+    min-height: 490px;
+    padding: 20px 15px 56px;
+    background-image: $conic-gradient-mobile;
+  }
+}
+
+.header__wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 200px;
+
+  @include vp-1199 {
+    grid-template-columns: min-content 1fr;
+    row-gap: 14px;
+  }
+
+  @include vp-767 {
+    row-gap: 76px;
+  }
+}
+
+.header__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include vp-1199 {
+    position: static;
+    grid-column: 1 / 2;
+  }
+}
+
+.header__phones {
+  grid-column: 2 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @include vp-1199 {
+    flex-direction: row-reverse;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.header__phone-link {
+  margin-bottom: 20px;
+  font-family: $ff-additional;
+  color: $color-default-white;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: opacity $trans-default;
+
+  @include vp-1199 {
+    margin-bottom: 0;
+    margin-left: 20px;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include hover-focus {
+    opacity: 0.6;
+  }
+}
+
+.header__promo {
+  grid-column: 1 / 2;
+
+  @include vp-1199 {
+    grid-column: 1 / -1;
+  }
+}

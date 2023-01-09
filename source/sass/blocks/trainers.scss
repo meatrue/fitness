@@ -1,0 +1,25 @@
+.trainers {
+  padding: 66px 103px 91px;
+
+  @include vp-1199 {
+    padding: 60px 45px 100px;
+  }
+
+  @include vp-767 {
+    padding: 50px 15px 70px;
+  }
+}
+
+.trainers__title {
+  margin-top: 0;
+  margin-bottom: 48px;
+
+  @include vp-1199 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    margin-bottom: 50px;
+  }
+}

@@ -1,0 +1,200 @@
+.super-games {
+  padding: 120px 40px 40px;
+
+  @include vp-1199 {
+    padding: 100px 45px 40px;
+  }
+
+  @include vp-767 {
+    padding: 70px 15px 20px;
+  }
+}
+
+.super-games__wrapper {
+  display: flex;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.super-games__announcement {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 25px 50px;
+  width: 44.6%;
+  padding: 7.3%;
+  color: $color-default-white;
+  background-color: $color-base-bright;
+
+  @include vp-1199 {
+    width: 43%;
+    gap: 10px 30px;
+    padding: 6.6% 6.4% 7%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 51px 15.17%;
+  }
+}
+
+.super-games__title {
+  grid-column: 1 / 2;
+  align-self: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 7px;
+  font-family: $ff-additional;
+  font-size: 82px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  @include vp-1199 {
+    justify-self: start;
+    font-size: 48px;
+  }
+}
+
+.super-games__info {
+  position: relative;
+  top: 6px;
+  grid-column: 2 / 3;
+  align-self: center;
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @include vp-1199 {
+    top: 2px;
+    justify-self: start;
+  }
+}
+
+.super-games__info-item {
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-of-type) {
+    margin-bottom: 22px;
+  }
+
+  @include vp-1199 {
+    &:not(:last-of-type) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.super-games__term {
+  order: 2;
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+}
+
+.super-games__info-main {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+
+  @include vp-1199 {
+    font-size: 24px;
+  }
+}
+
+.super-games__term--date .super-games__info-main {
+  margin-right: 7px;
+
+  @include vp-1199 {
+    margin-right: 3px;
+  }
+}
+
+.super-games__info-additional {
+  font-size: 14px;
+
+  @include vp-1199 {
+    font-size: 10px;
+  }
+}
+
+.super-games__definition {
+  order: 1;
+  margin-left: 0;
+  padding-bottom: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid $color-default-white;
+
+  @include vp-1199 {
+    padding-bottom: 5px;
+    font-size: 12px;
+  }
+}
+
+.super-games__description {
+  grid-column: 1 / 3;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 1.5;
+
+  @include vp-1199 {
+    font-size: 12px;
+  }
+}
+
+.super-games__button {
+  grid-column: 1 / 3;
+  display: block;
+  margin-top: 20px;
+  padding: 28px;
+  text-align: center;
+
+  @include vp-1199 {
+    padding: 16px 28px;
+    font-size: 10px;
+    border-width: 2px;
+  }
+}
+
+.super-games__image {
+  width: 55.4%;
+  background-color: #000145;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @supports not (background-image: url("../img/background/super-games.webp")) {
+    background-image: url("../img/background/super-games.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/super-games@2x.jpg");
+    }
+  }
+
+  @supports (background-image: url("../img/background/super-games.webp")) {
+    background-image: url("../img/background/super-games.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/super-games@2x.webp");
+    }
+  }
+
+  @include vp-1199 {
+    width: 57%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    overflow: hidden;
+    height: 292px;
+    background-size: cover;
+  }
+}

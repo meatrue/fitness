@@ -1,0 +1,33 @@
+.title {
+  font-family: $ff-additional;
+  font-weight: 600;
+  line-height: 1.2;
+
+  &--primary {
+    font-size: 92px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  &--secondary {
+    font-size: 54px;
+    letter-spacing: 0.03em;
+  }
+
+  @include vp-1199 {
+    &--primary {
+      font-size: 72px;
+    }
+
+    &--secondary {
+      font-size: 42px;
+    }
+  }
+
+  @include vp-767 {
+    &--secondary {
+      font-size: 32px;
+    }
+  }
+}

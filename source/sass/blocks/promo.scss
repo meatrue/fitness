@@ -1,0 +1,141 @@
+.promo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.promo__info {
+  width: 41%;
+  margin-right: 7%;
+  margin-bottom: 45px;
+  text-align: right;
+
+  @include vp-1199 {
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.promo__image {
+  width: 52%;
+  padding-bottom: 57.72%;
+  background-image: url("../img/background/superman.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @supports not (background-image: url("../img/background/superman.webp")) {
+    background-image: url("../img/background/superman.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/superman@2x.jpg");
+    }
+  }
+
+  @supports (background-image: url("../img/background/superman.webp")) {
+    background-image: url("../img/background/superman.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/superman@2x.webp");
+    }
+  }
+
+  @include vp-1199 {
+    width: 48%;
+    padding-bottom: 57.8%;
+  }
+
+  @include vp-767 {
+    display: none;
+    background-image: none;
+  }
+}
+
+.promo__city {
+  margin-bottom: 14px;
+  padding-right: 54px;
+  font-family: $ff-additional;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  @include vp-1199 {
+    margin-bottom: 12px;
+    padding-right: 0;
+    font-size: 34px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+  }
+}
+
+.promo__fitness-center {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 52px;
+
+  @include vp-1199 {
+    margin-bottom: 32px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 20px;
+  }
+}
+
+.promo__title {
+  order: 2;
+  margin-top: 0;
+
+  @include vp-1199 {
+    letter-spacing: 0.02em;
+    text-transform: none;
+  }
+}
+
+.promo__description {
+  order: 1;
+  position: relative;
+  margin: 0 16px 0 0;
+  padding-bottom: 32px;
+  padding-left: 0;
+  font-size: 14px;
+  list-style-type: none;
+
+  @include vp-1199 {
+    padding-bottom: 18px;
+  }
+
+  @include vp-767 {
+    margin-right: -10px;
+  }
+}
+
+.promo__description-item {
+  margin-bottom: 5px;
+}
+
+.promo__button {
+  padding: 18px 55px;
+
+  @include vp-1199 {
+    padding: 20px 33px;
+  }
+
+  @include vp-767 {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}

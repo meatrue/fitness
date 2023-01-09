@@ -1,0 +1,101 @@
+.subscription-card {
+  position: relative;
+  padding: 62px 20px;
+  background-color: $color-default-white;
+  border: 7px solid #ffffff;
+
+  @include vp-1199 {
+    padding: 15.4% 20px;
+  }
+
+  @include vp-767 {
+    padding: 19% 20px;
+  }
+
+  &:hover,
+  &:focus-within {
+    border-image: linear-gradient(to right bottom, #d10a42, #00359f) 1;
+  }
+}
+
+.subscription-card__title {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+
+  @include vp-767 {
+    margin-bottom: 16px;
+    font-size: 22px;
+  }
+}
+
+.subscription-card__description {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #495a7d;
+
+  @include vp-767 {
+    margin-bottom: 15px;
+  }
+}
+
+.subscription-card__price {
+  margin-top: 0;
+  margin-bottom: 44px;
+  padding-top: 40px;
+  font-size: 60px;
+  font-weight: 600px;
+  color: rgb(16, 58, 174);
+  line-height: 1.5;
+
+  strong {
+    position: relative;
+    z-index: 1;
+  }
+
+  strong::before {
+    position: absolute;
+    bottom: -14px;
+    left: -19px;
+    z-index: -1;
+    content: attr(data-price);
+    font-size: 100px;
+    font-weight: 700;
+    color: $color-shadow-grey;
+    line-height: 1.5;
+    opacity: 0.48;
+  }
+
+  @include vp-767 {
+    margin-bottom: 34px;
+    padding-top: 30px;
+    font-size: 48px;
+
+    strong::before {
+      bottom: -10px;
+      left: -17px;
+      font-size: 80px;
+    }
+  }
+}
+
+.subscription-card__ruble {
+  font-family: $ff-rouble;
+  font-weight: 400;
+  color: $color-base-dark;
+}
+
+.subscription-card__buy {
+  padding: 26px 42px;
+  outline: none;
+  transition: all 1s ease;
+}
+
+.subscription-card:hover .subscription-card__buy,
+.subscription-card__buy:focus {
+  color: $color-default-white;
+  border-color: transparent;
+  background: linear-gradient(148.82deg, #ed0233, #003eb7) border-box;
+}
