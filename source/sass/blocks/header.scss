@@ -1,19 +1,19 @@
 .header {
   min-height: 658px;
-  padding: 30px 40px 51px;
+  padding: 30px 40px 22px;
   color: $color-default-white;
   background-color: #b1022a;
   background-image: $conic-gradient;
 
   @include vp-1199 {
     min-height: 554px;
-    padding: 40px 45px 82px;
+    padding: 34px 45px 82px;
     background-image: $conic-gradient-tablet;
   }
 
   @include vp-767 {
     min-height: 490px;
-    padding: 20px 15px 56px;
+    padding: 16px 15px 49px;
     background-image: $conic-gradient-mobile;
   }
 }
@@ -45,13 +45,15 @@
 }
 
 .header__phones {
-  grid-column: 2 / -1;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 
   @include vp-1199 {
     flex-direction: row-reverse;
+    flex-wrap: wrap;
   }
 
   @include vp-767 {
@@ -89,9 +91,19 @@
 }
 
 .header__promo {
+  position: relative;
+  top: 24px;
   grid-column: 1 / 2;
+  grid-row: 1 / 2;
 
   @include vp-1199 {
+    position: relative;
+    top: 5px;
     grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  @include vp-767 {
+    top: -4px;
   }
 }

@@ -5,6 +5,7 @@
 .tabs__list {
   display: inline-flex;
   flex-wrap: wrap;
+  grid-template-columns: repeat(3, auto);
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
   margin: 0 auto 39px;
 
@@ -20,7 +21,7 @@
 .tabs__link {
   position: relative;
   margin-right: 46px;
-  padding: 20px 0;
+  padding: 20px 0 15px;
   font-size: 20px;
   color: rgba(16, 38, 84, 0.5);
   transition: all $trans-default;

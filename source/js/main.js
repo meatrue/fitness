@@ -3,6 +3,9 @@ import {initModals} from './modules/modals/init-modals';
 import {initVideos} from './modules/video';
 import {initTabs} from './modules/tabs';
 import {initTrainersSlider} from './modules/trainers-slider';
+import {initReviewsSlider} from './modules/reviews-slider';
+import {initForm} from './modules/form';
+import {initMoveLogo} from './modules/move-logo';
 
 // ---------------------------------
 
@@ -22,6 +25,9 @@ window.addEventListener('DOMContentLoaded', () => {
     initVideos();
     initTabs();
     initTrainersSlider();
+    initReviewsSlider();
+    initForm();
+    initMoveLogo();
     initModals();
   });
 });

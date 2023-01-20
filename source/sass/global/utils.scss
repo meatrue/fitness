@@ -79,3 +79,12 @@
   /* stylelint-disable-next-line */
   transition: none !important;
 }
+
+
+.error {
+  outline: 2px solid $color-torch-red;
+
+  @include focus {
+    outline: 2px solid $color-torch-red;
+  }
+}

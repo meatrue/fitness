@@ -1,0 +1,74 @@
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+
+  p {
+    margin: 0;
+  }
+
+  p:last-child {
+    grid-column: 1 / -1;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    display: block;
+    width: 100%;
+    padding: 0 10px 6px 0;
+    font-size: 14px;
+    color: $color-default-white;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #74819c;
+
+    &::placeholder {
+      color: $color-default-white;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #00bfff;
+      outline-offset: 2px;
+    }
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 18px 30px 15px;
+    font-family: $ff-base;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $color-default-white;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 3px solid $color-default-white;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px #00bfff;
+    }
+  }
+
+  @include vp-1199 {
+    grid-gap: 30px 60px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    grid-gap: 38px 0;
+  }
+}

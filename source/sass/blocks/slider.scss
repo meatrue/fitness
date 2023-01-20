@@ -1,20 +1,22 @@
 .slider {
   position: relative;
-
-  @include vp-1199 {
-    padding-right: 56px;
-    padding-left: 56px;
-  }
-
-  @include vp-767 {
-    padding-right: 32px;
-    padding-left: 32px;
-  }
 }
 
 .slider__wrapper {
-  width: 100%;
-  overflow-x: hidden;
+  position: relative;
+  left: -20px;
+  width: calc(100% + 40px);
+
+  @include vp-1199 {
+    left: 0;
+    width: 83.5%;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    width: 83.12%;
+    max-width: 500px;
+  }
 }
 
 .slider__button {
@@ -57,11 +59,11 @@
 
   @include vp-1199 {
     &--prev {
-      left: 0;
+      left: 14px;
     }
 
     &--next {
-      right: 0;
+      right: 14px;
     }
   }
 
@@ -81,22 +83,20 @@
 }
 
 .slider__item {
-  min-width: 22.41%;
-  height: 21.5vw;
-  max-height: 294px;
-  margin-right: 40px;
+  height: 26.65vw;
+  max-height: 364px;
+  padding: 35px 20px;
 
   @include vp-1199 {
-    min-width: 47.35%;
-    height: 38.3vw;
-    max-height: 38.3vw;
-    margin-right: 30px;
+    height: 47.4vw;
+    max-height: 47.4vw;
+    padding: 35px 15px;
   }
 
   @include vp-767 {
-    min-width: 100%;
-    height: 85.6vw;
-    max-height: 85.6vw;
-    margin-right: 0;
+    height: 107.5vw;
+    max-height: 676px;
+    min-height: 344px;
+    padding: 35px 20px;
   }
 }

@@ -15,6 +15,10 @@
     letter-spacing: 0.03em;
   }
 
+  &--light {
+    color: $color-default-white;
+  }
+
   @include vp-1199 {
     &--primary {
       font-size: 72px;

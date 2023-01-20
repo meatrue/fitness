@@ -1,7 +1,7 @@
 .promo {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
 
   @include vp-767 {
     display: block;
@@ -9,6 +9,9 @@
 }
 
 .promo__info {
+  position: relative;
+  right: -3px;
+  align-self: flex-end;
   width: 41%;
   margin-right: 7%;
   margin-bottom: 45px;
@@ -60,22 +63,24 @@
 }
 
 .promo__city {
-  margin-bottom: 14px;
+  margin-bottom: 17px;
   padding-right: 54px;
   font-family: $ff-additional;
-  font-size: 48px;
+  font-size: 39px;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 
   @include vp-1199 {
-    margin-bottom: 12px;
-    padding-right: 0;
-    font-size: 34px;
+    margin-bottom: 8px;
+    padding-right: 10px;
+    font-size: 28px;
   }
 
   @include vp-767 {
-    font-size: 28px;
+    margin-bottom: 15px;
+    padding-right: 7px;
+    font-size: 23px;
   }
 }
 
@@ -83,59 +88,75 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-bottom: 52px;
+  margin-bottom: 49px;
 
   @include vp-1199 {
-    margin-bottom: 32px;
+    margin-bottom: 35px;
+    padding-right: 6px;
   }
 
   @include vp-767 {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    padding-right: 4px;
   }
 }
 
 .promo__title {
   order: 2;
+  width: 250px;
+  max-width: 250px;
   margin-top: 0;
+  word-break: break-word;
 
   @include vp-1199 {
-    letter-spacing: 0.02em;
+    width: 190px;
+    max-width: 190px;
+    letter-spacing: 0.03em;
     text-transform: none;
+  }
+
+  @include vp-767 {
+    width: 187px;
+    max-width: 187px;
   }
 }
 
 .promo__description {
   order: 1;
-  position: relative;
-  margin: 0 16px 0 0;
+  margin: 0 16px 0 -5px;
   padding-bottom: 32px;
   padding-left: 0;
   font-size: 14px;
   list-style-type: none;
 
   @include vp-1199 {
+    margin-right: 21px;
     padding-bottom: 18px;
   }
 
   @include vp-767 {
-    margin-right: -10px;
+    margin-right: -9px;
+    margin-left: -5px;
+    padding-bottom: 30px;
   }
 }
 
 .promo__description-item {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .promo__button {
-  padding: 18px 55px;
+  padding: 21px 55px 18px;
 
   @include vp-1199 {
-    padding: 20px 33px;
+    margin-right: 3px;
+    padding: 20px 31px;
   }
 
   @include vp-767 {
     display: block;
     width: 100%;
+    margin-left: -3px;
     text-align: center;
   }
 }

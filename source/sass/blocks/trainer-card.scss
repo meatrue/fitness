@@ -48,13 +48,27 @@
   }
 }
 
-.trainer-card__cover {
+.trainer-card__cover,
+.trainer-card__info {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 35px;
+  right: 20px;
+  bottom: 35px;
+  left: 20px;
+
+  @include vp-1199 {
+    right: 15px;
+    left: 15px;
+  }
+
+  @include vp-767 {
+    right: 20px;
+    left: 20px;
+  }
+}
+
+.trainer-card__cover {
   z-index: 1;
-  width: 100%;
-  height: 100%;
   color: $color-default-white;
   background-color: #c1c6d2;
   transition: all 1s ease;
@@ -64,12 +78,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 1s ease;
 }
 
 .trainer-card__cover-title {
   position: absolute;
-  bottom: 30px;
+  bottom: 22px;
   right: 0;
   left: 0;
   margin: 0;
@@ -82,13 +95,8 @@
 }
 
 .trainer-card__info {
-  position: absolute;
-  top: 0;
-  left: 0;
   z-index: 2;
   overflow-y: scroll;
-  width: 100%;
-  height: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
   color: $color-default-white;
@@ -140,4 +148,3 @@
 .trainer-card__info-item:not(:last-child) {
   margin-bottom: 14px;
 }
-

@@ -17,13 +17,6 @@ const initTrainersSlider = () => {
     loop: true,
 
     breakpoints: {
-      280: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 22,
-        initialSlide: 2,
-      },
-
       320: {
         slidesPerView: 1,
         slidesPerGroup: 1,
@@ -31,17 +24,17 @@ const initTrainersSlider = () => {
         initialSlide: 0,
       },
 
-      768: {
+      767: {
         slidesPerView: 2,
         slidesPerGroup: 1,
-        spaceBetween: 30,
+        spaceBetween: 0,
         initialSlide: 0,
       },
 
       1200: {
         slidesPerView: 4,
         slidesPerGroup: 1,
-        spaceBetween: 40,
+        spaceBetween: 0,
         initialSlide: 0,
       },
     },

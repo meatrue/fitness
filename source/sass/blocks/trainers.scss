@@ -1,25 +1,26 @@
 .trainers {
-  padding: 66px 103px 91px;
+  padding: 66px 83px 56px;
 
   @include vp-1199 {
-    padding: 60px 45px 100px;
+    padding: 60px 30px 65px;
   }
 
   @include vp-767 {
-    padding: 50px 15px 70px;
+    padding: 43px 0 35px;
   }
 }
 
 .trainers__title {
   margin-top: 0;
-  margin-bottom: 48px;
+  margin-bottom: 13px;
 
   @include vp-1199 {
-    margin-bottom: 30px;
+    margin-bottom: -4px;
+    padding-right: 6px;
     text-align: center;
   }
 
   @include vp-767 {
-    margin-bottom: 50px;
+    margin-bottom: 7px;
   }
 }
