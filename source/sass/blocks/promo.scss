@@ -103,8 +103,8 @@
 
 .promo__title {
   order: 2;
-  width: 250px;
-  max-width: 250px;
+  width: 260px;
+  max-width: 260px;
   margin-top: 0;
   word-break: break-word;
 
@@ -123,18 +123,21 @@
 
 .promo__description {
   order: 1;
-  margin: 0 16px 0 -5px;
+  position: relative;
+  right: 5px;
+  margin: 0;
   padding-bottom: 32px;
   padding-left: 0;
   font-size: 14px;
   list-style-type: none;
 
   @include vp-1199 {
-    margin-right: 21px;
+    right: 21px;
     padding-bottom: 18px;
   }
 
   @include vp-767 {
+    right: 0;
     margin-right: -9px;
     margin-left: -5px;
     padding-bottom: 30px;

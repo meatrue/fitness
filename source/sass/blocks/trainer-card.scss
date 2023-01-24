@@ -11,7 +11,12 @@
     box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
   }
 
-  &:hover .trainer-card__info {
+  &:focus-within {
+    outline: none;
+  }
+
+  &:hover .trainer-card__info,
+  &:focus-within .trainer-card__info {
     opacity: 1;
   }
 
@@ -21,6 +26,10 @@
 
   &:hover .trainer-card__cover-image {
     transform: scaleX(-1);
+
+    &--pashkov {
+      transform: scaleX(1);
+    }
   }
 
   @include vp-1199 {
@@ -44,6 +53,10 @@
 
     &:active .trainer-card__cover-image {
       transform: scaleX(-1);
+
+      &--pashkov {
+        transform: scaleX(1);
+      }
     }
   }
 }
@@ -78,6 +91,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  &--pashkov {
+    transform: scaleX(-1);
+  }
 }
 
 .trainer-card__cover-title {

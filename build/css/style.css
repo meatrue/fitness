@@ -1984,8 +1984,8 @@ form button:focus-visible {
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
   order: 2;
-  width: 250px;
-  max-width: 250px;
+  width: 260px;
+  max-width: 260px;
   margin-top: 0;
   word-break: break-word;
 }
@@ -1994,7 +1994,9 @@ form button:focus-visible {
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
   order: 1;
-  margin: 0 16px 0 -5px;
+  position: relative;
+  right: 5px;
+  margin: 0;
   padding-bottom: 32px;
   padding-left: 0;
   font-size: 14px;
@@ -2633,7 +2635,12 @@ form button:focus-visible {
   box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
 }
 
-.trainer-card:hover .trainer-card__info {
+.trainer-card:focus-within {
+  outline: none;
+}
+
+.trainer-card:hover .trainer-card__info,
+.trainer-card:focus-within .trainer-card__info {
   opacity: 1;
 }
 
@@ -2645,6 +2652,12 @@ form button:focus-visible {
   -webkit-transform: scaleX(-1);
   -ms-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+.trainer-card:hover .trainer-card__cover-image--pashkov {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .trainer-card__cover,
@@ -2670,6 +2683,12 @@ form button:focus-visible {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.trainer-card__cover-image--pashkov {
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .trainer-card__cover-title {
@@ -3120,11 +3139,28 @@ form button:focus-visible {
   -ms-grid-rows: (auto)[2];
   grid-template-rows: repeat(2, auto);
   grid-gap: 17px 28px;
+  -ms-flex-line-pack: start;
+  align-content: start;
+  height: 244px;
+  max-height: 244px;
+  overflow-y: auto;
   padding: 58px 62px 56px 62px;
   color: #ffffff;
   background-color: #1c3374;
   -webkit-box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
   box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
+  scrollbar-color: #093d82 rgba(16, 38, 84, 0.89);
+  scrollbar-width: thin;
+}
+
+.reviews__card::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgba(16, 38, 84, 0.89);
+}
+
+.reviews__card::-webkit-scrollbar-thumb {
+  background-color: #093d82;
+  border-radius: 9em;
 }
 
 .reviews__image-container {
@@ -3600,7 +3636,7 @@ form button:focus-visible {
   }
 
   .promo__description {
-    margin-right: 21px;
+    right: 21px;
     padding-bottom: 18px;
   }
 
@@ -3832,6 +3868,12 @@ form button:focus-visible {
     -webkit-transform: scaleX(-1);
     -ms-transform: scaleX(-1);
     transform: scaleX(-1);
+  }
+
+  .trainer-card:active .trainer-card__cover-image--pashkov {
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
   }
 
   .trainer-card__cover,
@@ -4155,6 +4197,7 @@ form button:focus-visible {
   }
 
   .promo__description {
+    right: 0;
     margin-right: -9px;
     margin-left: -5px;
     padding-bottom: 30px;
@@ -4487,6 +4530,8 @@ form button:focus-visible {
 
   .reviews__card {
     grid-gap: 20px 15px;
+    height: 335px;
+    max-height: 335px;
     padding: 25px 26px 31px;
   }
 
