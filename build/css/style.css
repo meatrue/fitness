@@ -3141,26 +3141,12 @@ form button:focus-visible {
   grid-gap: 17px 28px;
   -ms-flex-line-pack: start;
   align-content: start;
-  height: 244px;
-  max-height: 244px;
-  overflow-y: auto;
+  min-height: 242px;
   padding: 58px 62px 56px 62px;
   color: #ffffff;
   background-color: #1c3374;
   -webkit-box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
   box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
-  scrollbar-color: #093d82 rgba(16, 38, 84, 0.89);
-  scrollbar-width: thin;
-}
-
-.reviews__card::-webkit-scrollbar {
-  width: 6px;
-  background-color: rgba(16, 38, 84, 0.89);
-}
-
-.reviews__card::-webkit-scrollbar-thumb {
-  background-color: #093d82;
-  border-radius: 9em;
 }
 
 .reviews__image-container {
@@ -3246,12 +3232,10 @@ form button:focus-visible {
 
 .carousel__button {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 144px;
   z-index: 1;
   width: 16px;
   height: 36px;
-  margin: auto 0;
   background-color: transparent;
   background-image: url("../img/svg/slider-arrow-left.svg");
   background-repeat: no-repeat;
@@ -4530,8 +4514,7 @@ form button:focus-visible {
 
   .reviews__card {
     grid-gap: 20px 15px;
-    height: 335px;
-    max-height: 335px;
+    min-height: 335px;
     padding: 25px 26px 31px;
   }
 
@@ -4562,6 +4545,7 @@ form button:focus-visible {
   }
 
   .carousel__button {
+    top: 198px;
     width: 10px;
     height: 19px;
   }
